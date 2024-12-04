@@ -1,0 +1,150 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+ 
+
+}
+
+.container {
+    height: 100vh;
+    width:100vw;
+    margin: auto;
+    padding: 20px;
+    display: flex;
+    align-items: flex-start;
+   margin-left: 0%;
+   margin-right:20%;
+}
+
+.content {
+    flex: 1;
+    padding-right: 20px;
+    margin-left: 10%;
+    width: 50%;
+}
+@keyframes updown {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-30px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+.image-container {
+    flex: 0.5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    width: 100%;
+    height: auto;
+    margin-top: 10%;
+    margin-left: 20%;
+    animation: updown 2s ease-in-out infinite;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-right: 50%;
+}
+
+.content h1 {
+    color: #2b3942;
+    letter-spacing: 10px;
+margin-left:10%;
+margin-top: 10%;
+font-size: 3.5rem;
+}
+
+p {
+    line-height: 1.6;
+}
+
+.mission {
+    background-color: #eaf3ff;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Stack items vertically */
+        height: auto;
+        padding: 10px;
+    }
+
+    .content {
+        width: 100%;
+        margin-left: 0;
+        padding-right: 0;
+        margin-top: 10px;
+    }
+   
+      
+    .image-container {
+        width: 50%;
+        margin-top: 20px;
+        justify-content: center;
+        margin-left: 40%;
+        
+    }
+
+    .content h1 {
+        font-size: 2.5rem;
+        letter-spacing: 5px;
+        margin-left: 0;
+        text-align: center;
+
+    }
+
+    .mission {
+        padding: 15px;
+        margin-right: 20px;
+    }
+    
+}
+@media (width: 1024px) {
+    .container {
+        flex-direction: row; /* Arrange items side by side */
+        height: auto;
+        padding: 10px;
+    }
+
+    .content {
+        width: 60%; /* Adjust width of content */
+        margin-left: 0;
+        padding-right: 0;
+        margin-top: 0; /* Adjust top margin */
+    }
+
+    .image-container {
+        width: 30%; /* Adjust width of image container */
+        margin-left: 20px; /* Space between text and image */
+        margin-top: 0; /* Remove top margin */
+        justify-content: flex-start; /* Align image to the left */
+    }
+    .image-container img{
+        width: 70%;
+        margin-top: 40%;
+    }
+
+    .content h1 {
+        font-size: 2.8rem; /* Adjust font size */
+        letter-spacing: 7px; /* Adjust letter spacing */
+        margin-left: 0;
+        text-align: left; /* Align text left */
+    }
+
+    .mission {
+        padding: 15px;
+        margin-right: 20px;
+    }
+}

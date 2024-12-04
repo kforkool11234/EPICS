@@ -1,0 +1,68 @@
+/* Contact.css */
+.contact-container {
+  background-color: #918a8a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.contact-form {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+  opacity: 0;
+  transform: translateY(-30px); /* Initially above the container */
+  transition: transform 1s ease, opacity 1s ease; /* Adding smooth transition */
+}
+
+.contact-form.show {
+  opacity: 1;
+  transform: translateY(0); /* Move to normal position */
+}
+
+/* Rest of your styles */
+.contact-label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.contact-input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  font-size: 16px;
+}
+
+.contact-textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  font-size: 16px;
+  min-height: 100px;
+  margin-bottom: 20px;
+}
+
+.contact-button {
+  background-color: #ff7f00;
+  color: #ffffff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.contact-button:hover {
+  background-color: green;
+  cursor: pointer;
+}

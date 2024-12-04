@@ -1,0 +1,87 @@
+.container {
+    display: flex; /* Align divs side by side */
+    justify-content: space-between; /* Space between the divs */
+    background-color: grey; /* Grey background */
+    padding: 40px; /* Padding around the container */
+    height: 550px;
+    overflow: hidden;
+  }
+  .card1{
+    padding-bottom: 58px;
+  }
+  .card {
+    background-color: white; /* White background for cards */
+    padding: 30px; /* Padding inside cards */
+    border-radius: 10px; /* Rounded corners */
+    width: 23%; 
+    margin-left: 20px;/* Set width of each card */
+    margin-right: 49px;
+    
+  }
+  .card h2{
+    font-size: 2.5rem;
+  }
+  .card p{
+    font-size: 1.1rem;
+  }
+  h2 {
+    margin-top: 18px; /* Remove top margin from headings */
+  }
+  
+  button {
+    margin-top: 50px; /* Space above the button */
+    padding: 10px 20px; /* Padding inside the button */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    background-color: #da870a; /* Button color */
+    color: white; /* Button text color */
+    cursor: pointer; /* Pointer on hover */
+    align-items: center;
+    justify-content: center;
+    margin-left:140px;
+
+  }
+  
+  button:hover {
+    background-color: #32b200; /* Darken button color on hover */
+  }
+  .button-group {
+    display: flex; /* Align buttons in a row */
+    justify-content: space-between; /* Space between buttons */
+    margin-top: 10px; /* Space above the button group */
+  }
+  
+  .button-group button {
+    flex: 1; /* Make buttons take equal space */
+    margin: 0 5px; /* Space between buttons */
+    padding: 10px; /* Button padding */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    background-color: #da870a; /* Button color */
+    color: white; /* Button text color */
+    cursor: pointer; /* Pointer on hover */
+    margin-top: 42px;
+  }
+  
+  .button-group button:hover {
+    background-color: #32b200; /* Darken button color on hover */
+  }
+  @media screen and (max-width: 1024px){
+    .card{
+      width: 70%;
+      margin: 2%;;
+      height: 80%;
+      text-align: center;
+      margin-right: 2%;
+    }
+    .container{
+      display: flex;
+      flex-direction: column;
+      
+    }
+    .ludo {
+      margin-right:80% ;
+    
+    }
+
+  }

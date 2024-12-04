@@ -1,0 +1,68 @@
+/* Container to center the blog posts */
+.blog-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: rgb(104, 99, 99);
+  }
+  
+
+  .blog-post {
+    width: 80%; 
+    background-color: #f0f0f0; /* Light gray background */
+    padding: 20px;
+    margin: 10px 0; /* Space between blog posts */
+    border-radius: 10px; /* Rounded corners */
+    position: relative;
+    box-shadow: 0 4px 8px rgba(98, 38, 4, 0.1);
+    transform: translateY(30px); /* Initially below the normal position */
+    transition: transform 6s ease, opacity 1s ease; 
+   
+  }
+  
+  /* Styling for the arrow link */
+  .read-more {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 1.5rem;
+    color: #674848;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .read-more:hover {
+    color: #007bff; /* Color change on hover */
+  }
+  .a{
+    font-size: 2rem;
+  }
+  .imga:hover{
+    
+    cursor: pointer;
+   filter:blur(3px);
+  }
+
+
+/* Class that will be added when the post enters the viewport */
+.blog-post.show {
+  opacity: 1;
+  transform: translateY(0); /* Moves into normal position */
+}
+
+.read-more {
+  color: #ff7f00;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+.read-more:hover {
+  color: #ff4500;
+}
+
+  @media screen and (max-width: 764px){
+    .blog-post img{
+      width:220px;
+    }
+  }
