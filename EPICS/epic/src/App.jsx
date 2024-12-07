@@ -6,6 +6,12 @@ import Forme from './Components/Forme';
 import Blogpage from './Components/Blogpage';
 import About from './Components/About';
 import Contact from './Components/Contact';
+import PersonalInfo from './components/PersonalInfo';
+import DomainSelection from './components/DomainSelection';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import './App.css';
+
 
 const App = () => {
   return (
@@ -25,6 +31,8 @@ const App = () => {
           <Route path="/blog" element={<Blogpage />} /> {/* Blog page */}
           <Route path="/about" element={<About />} /> {/* About page */}
           <Route path="/contact" element={<Contact />} /> {/* Contact page */}
+          <Route path="/" element={<PersonalInfo />} />
+          <Route path="/domain-selection" element={<DomainSelection />} />
         </Routes>
       </div>
    </Router>
