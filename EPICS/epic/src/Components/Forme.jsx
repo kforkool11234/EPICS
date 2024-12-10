@@ -13,7 +13,7 @@ const Forme = () => {
         <p>
           हमारी सेवाएँ न्यूनतम या बिना लागत पर समर्पित एजेंट प्रदान करती हैं, जो सरकारी योजनाओं में पंजीकरण के लिए सहायता करती हैं। कागजी कार्रवाई से लेकर स्थलों पर मार्गदर्शन करने तक, हम आपके अनुभव को सहज बनाते हैं। हमारी टीम पंजीकरण प्रक्रिया को सरल बनाती है, ताकि आप लाभ प्राप्त कर सकें।
         </p>
-        <button classname="ludo">Register</button>
+        <button classname="ludo"><a href="/PersonalInfo.jsx" className="ludo"></a>Register</button>
       </div></div>
       <div className="card">
         <h2>Schemes updates</h2>
@@ -23,7 +23,7 @@ const Forme = () => {
         <p>
           हमारी सेवाएँ SMS के माध्यम से योजनाओं की जानकारी प्रदान करती हैं, साथ ही जागरूकता के लिए प्रक्रियाओं की सूची भी उपलब्ध कराती हैं। आप या तो योजना का लाभ स्वयं ले सकते हैं या एजेंट पोर्टल के माध्यम से हमारे एजेंट से सहायता प्राप्त कर सकते हैं।
         </p>
-        <button classname="ludo">Register</button>
+        <button classname="ludo"><a href="/PersonalInfo.jsx" className="ludo"></a>Register</button>
       </div>
       <div className="card">
         <h2>Urgent-Money Need</h2>
