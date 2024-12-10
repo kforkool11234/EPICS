@@ -10,15 +10,6 @@ header {
   color: white;
   padding: 20px;
   text-align: center;
-  box-sizing: border-box;
-  width: 100%;
-  height: 100%;
-}
-.container{
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  height: 100%;
 }
 
 main {
@@ -29,7 +20,6 @@ main {
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   color: black;
-  
 }
 
 label {
@@ -73,9 +63,6 @@ footer {
   margin-top: 20px;
   font-size: 0.9em;
   color: #666;
-  padding: 10px 0;
-  width: 100%;
-  box-sizing: border-box
 }
 
 .special-categories {
@@ -85,16 +72,11 @@ footer {
   flex-wrap: wrap;
   justify-content: flex-start;
 }
-.preferred-scheme {
-  display: flex;
-  flex-wrap: wrap; /* Adjusts layout for smaller screens */
-  gap: 10px; /* Adds spacing between items */
-}
+
 .special-categories div {
   display: flex;
   align-items: center; /* Align checkbox and label horizontally */
   gap: 8px; /* Add space between checkbox and label */
-  width: 100%;
 }
 
 .special-categories input[type="checkbox"] {
@@ -125,7 +107,6 @@ footer {
   display: flex;
   align-items: center; /* Align checkbox and label horizontally */
   gap: 8px; /* Add space between checkbox and label */
-  width: 100%;
 }
 .preferred-scheme input[type="checkbox"] {
   appearance: checkbox; 
@@ -141,114 +122,4 @@ footer {
 
 .preferred-scheme input[type="checkbox"]:checked {
   background-color: white;
-}
-/* Responsive Design */
-@media only screen and (max-width: 768px) {
-  header  {
-    font-size: 1.5em; /* Smaller font size for smaller screens */
-    width: 100%;
-    padding: 10px 0;
-  }
-
-  footer {
-    font-size: 0.9em; /* Adjust font size for small screens */
-    width: 100%;
-    padding: 10px 0;
-  }
-
-  main {
-    margin: 10px; /* Reduced margin for smaller screens */
-    padding: 15px; /* Reduced padding */
-    width: 100%;
-    padding: 10px 0;
-  }
-
-  .special-categories, .preferred-scheme {
-    flex-direction: column; /* Stack categories vertically on smaller screens */
-    width: 100%;
-    padding: 10px 0;
-  }
-
-  .special-categories div, .preferred-scheme div {
-    align-items: flex-start; /* Align checkboxes and labels to the left */
-    width: 100%;
-    padding: 10px 0;
-  }
-
-  .special-categories input[type="checkbox"], .preferred-scheme input[type="checkbox"] {
-    width: 18px;
-    height: 18px;
-    width: 100%;
-    padding: 10px 0;
-  }
-}
-
-@media only screen and (max-width: 480px) {
-  header h1 {
-    font-size: 1.2em; /* Even smaller font size for very small screens */
-    width: 100%;
-    padding: 10px 0;
-  }
-
-  footer {
-    font-size: 0.75em; /* Adjust even further for very small screens */
-    width: 100%;
-    padding: 10px 0;
-  }
-
-  main {
-    padding: 10px; /* Further reduce padding */
-    max-width: 100%; /* Ensure the main content stretches to full width */
-    width: 100%;
-    padding: 10px 0;
-  }
-
-  input, select, textarea, button {
-    font-size: 16px; /* Increase font size for readability */
-    padding: 12px; /* Increase padding for easier interaction */
-    width: 100%;
-    padding: 10px 0;
-  }
-
-  button {
-    font-size: 16px; /* Ensure buttons are large enough for touch */
-    width: 100%;
-    padding: 10px 0;
-  }
-
-  .special-categories, .preferred-scheme {
-    gap: 10px; /* Increase spacing for checkboxes on mobile */
-    width: 100%;
-    padding: 10px 0;
-  }
-
-  .special-categories input[type="checkbox"], .preferred-scheme input[type="checkbox"] {
-    width: 20px;
-    height: 20px;
-    width: 100%;
-    padding: 10px 0;
-  }
-}
-/* Ensure the main container or body content stretches */
-.main-container {
-  min-height: 100%; /* Ensures the main container takes at least the full height of the viewport */
-  width: 100%; /* Full width of the screen */
-  display: flex;
-  flex-direction: column; /* Allows stacking header, content, and footer */
-}
-
-header {
-  width: 100%; /* Full width */
-  background-color: #333; /* Example background color */
-  color: white; /* Text color */
-  padding: 10px;
-  text-align: center;
-}
-
-
-
-
-.content {
-  flex: 1; /* This takes up all the remaining space between header and footer */
-  padding: 20px;
 }
