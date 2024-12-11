@@ -1,6 +1,5 @@
 import React from 'react';
 import './Main.css';
-import { Link } from 'react-router-dom';
 
 const FrontPage = () => {
   return (
@@ -20,14 +19,7 @@ const FrontPage = () => {
         <p className="plain-text">For a Better Life, a Secure Life, and a Happy Life</p>
       </div>
 
-      {/* Button positioned below the video */}
-      <div className="button-container">
-        <Link to="/personalinfo" style={{ textDecoration: 'none' }}>
-          <button className="action-button">
-            Check applicable schemes for you now
-          </button>
-        </Link>
-      </div>
+   
     </div>
   );
 };

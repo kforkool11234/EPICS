@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import './BlogPage.css';
 import { FaArrowAltCircleRight } from "react-icons/fa";
 
+
 const BlogPage = () => {
 
   useEffect(() => {

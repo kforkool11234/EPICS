@@ -1,0 +1,96 @@
+.language-toggle {
+  padding: 10px 20px;
+  margin: 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.language-toggle:hover {
+  background-color: #0056b3;
+}
+
+form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px 15px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #218838;
+}
+.language-toggle {
+  padding: 12px 6px;  /* Smaller padding */
+  font-size: 14px;  /* Smaller font size */
+  border: 2px solid #ccc;
+  border-radius: 15px;  /* Slightly more rounded corners */
+  background-color: transparent;
+  color: #333;
+  cursor: pointer;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);  /* Reduced shadow size */
+  transition: all 0.3s ease;  /* Smooth transition for effects */
+display: inline-block;
+white-space: nowrap;
+}
+
+.language-toggle:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);  /* Slightly stronger shadow on hover */
+}
+
+.language-toggle:focus {
+  outline: none;
+  border-color: #007bff;  /* Blue border on focus */
+}
+
+.language-toggle span {
+  font-weight: bold;
+  text-transform: capitalize;  /* Capitalize button text */
+}
+
+.language-toggle-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 10px 0;  /* Reduced margin between the wrapper and other elements */
+}
+
+.language-toggle .on {
+  color: #007bff;  /* Blue color for 'On' state */
+}
+
+.language-toggle .off {
+  color: #888;  /* Gray color for 'Off' state */
+}
+
+.language-toggle:active {
+  transform: scale(0.98);  /* Shrink the button slightly when clicked */
+}

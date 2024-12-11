@@ -28,25 +28,26 @@
     margin-top: 18px; /* Remove top margin from headings */
   }
   
-  button {
+  button  {
     margin-top: 50px; /* Space above the button */
     padding: 10px 20px; /* Padding inside the button */
     border: none; /* Remove border */
     border-radius: 5px; /* Rounded corners */
-    background-color: #da870a; /* Button color */
+    background-color: #cd7e08; /* Button color */
     color: white; /* Button text color */
     cursor: pointer; /* Pointer on hover */
     align-items: center;
     justify-content: center;
 
   }
-  
+
   button:hover {
     background-color: #32b200; /* Darken button color on hover */
   }
   .button-group {
     display: flex; /* Align buttons in a row */
-    justify-content: space-between; /* Space between buttons */
+    justify-content: space-between;
+    gap:8px; /* Space between buttons */
     margin-top: 10px; /* Space above the button group */
   }
   
@@ -56,14 +57,14 @@
     padding: 10px; /* Button padding */
     border: none; /* Remove border */
     border-radius: 5px; /* Rounded corners */
-    background-color: #da870a; /* Button color */
+    background-color: #28a745; /* Button color */
     color: white; /* Button text color */
     cursor: pointer; /* Pointer on hover */
     margin-top: 42px;
   }
   
   .button-group button:hover {
-    background-color: #32b200; /* Darken button color on hover */
+    background-color: #07691e; /* Darken button color on hover */
   }
   @media screen and (max-width: 1024px){
     .card{

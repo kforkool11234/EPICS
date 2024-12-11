@@ -7,7 +7,7 @@ const About = () => {
             <div className="content">
                 <h1>About Us</h1>
                 <p>
-                    At <strong>Seva-setu</strong>, we believe that everyone deserves to be aware of their fundamental rights and the benefits available to them, regardless of their background or circumstances. We are committed to supporting underprivileged communities by spreading knowledge about essential government schemes, legal rights, and resources that can empower individuals and families to improve their quality of life.
+                    At <strong>Saral</strong>, we believe that everyone deserves to be aware of their fundamental rights and the benefits available to them, regardless of their background or circumstances. We are committed to supporting underprivileged communities by spreading knowledge about essential government schemes, legal rights, and resources that can empower individuals and families to improve their quality of life.
                 </p>
 
                 <div className="mission">

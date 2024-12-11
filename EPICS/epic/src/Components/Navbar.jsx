@@ -40,7 +40,7 @@ const Navbar = () => {
 
     return (
         <div className="navbar">
-            <div className="logo"><img src="imgs/sevase.png" width="150px" alt="Logo" /></div>
+            <div className="logo"><img src="imgs/sevase.png" width="150px" alt="Logo" height="40px" /></div>
             <div className="usericon" onClick={toggleUserDropdown}>
                 <FaUserCircle />
                 {isUserDropdownOpen && (
