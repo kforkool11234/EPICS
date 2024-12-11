@@ -107,7 +107,7 @@ app.post('/schemes', async (req, res) => {
 
         // Log the result and respond to the client
         result=(result.response.text());
-        axios.post()
+        console.log(result)
         res.status(200).json({ schemes: result.response.text() });
     } catch (error) {
         console.error('Error fetching schemes:', error);
