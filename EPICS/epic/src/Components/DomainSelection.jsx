@@ -4,8 +4,6 @@ const DomainSelection = () => {
   return (
     <form>
       <h2>Select Your Domain</h2>
-
-
       <p>Preferred Schemes:</p>
       <div className="preferred-scheme">
         <div>
