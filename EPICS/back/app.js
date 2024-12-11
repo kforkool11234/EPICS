@@ -9,6 +9,7 @@ import User from './models/User.js';
 import MobileNumber from './models/numb.js';
 import { GoogleGenerativeAI } from "@google/generative-ai"
 import dotenv from "dotenv"
+import axios from 'axios';
 // Get __dirname equivalent in ES module
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -102,11 +103,12 @@ app.post('/schemes', async (req, res) => {
             `You are an AI system that evaluates the eligibility of individuals for government schemes in India. 
             Based on the provided user details, categorize the individual into relevant divisions and generate 
             a list of all the government schemes they are eligible for. The details are given below:
-            ${combinedString}`
+            ${combinedString} just give the scheme name info and link nothing else like warning etc`
         );
 
         // Log the result and respond to the client
-        console.log(result.response.text());
+        result=(result.response.text());
+        axios.post()
         res.status(200).json({ schemes: result.response.text() });
     } catch (error) {
         console.error('Error fetching schemes:', error);
