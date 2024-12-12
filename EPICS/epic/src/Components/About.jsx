@@ -1,7 +1,48 @@
-import React from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "./About.css";
 
 const About = () => {
+    const [number, setNumber] = useState(0);
+    const sectionRef = useRef(null);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        let start = 0;
+                        const target = 1000;
+                        const duration = 2000; // Total duration in milliseconds
+                        const step = (target / duration) * 10; // Increment per 10ms
+
+                        const interval = setInterval(() => {
+                            start += step;
+                            if (start >= target) {
+                                setNumber(target);
+                                clearInterval(interval);
+                            } else {
+                                setNumber(Math.ceil(start)); // Avoid decimal values
+                            }
+                        }, 10);
+
+                        observer.unobserve(entry.target); // Stop observing once animation starts
+                    }
+                });
+            },
+            { threshold: 0.1 } // Trigger when 10% of the element is visible
+        );
+
+        if (sectionRef.current) {
+            observer.observe(sectionRef.current);
+        }
+
+        return () => {
+            if (sectionRef.current) {
+                observer.disconnect();
+            }
+        };
+    }, []);
+
     return (
         <div className="container">
             <div className="content">
@@ -16,15 +57,14 @@ const About = () => {
                         Our mission is to bridge the gap between underprivileged communities and the knowledge needed to access government assistance, legal protections, and social resources. Through outreach programs, workshops, and accessible content, we aim to empower individuals with the information they need to advocate for themselves and their families.
                     </p>
                 </div>
-                </div>
-               
-            
+                <p ref={sectionRef} className="schemes-counter">
+                    Bringing over <b>{number}</b> schemes at one platform to help you
+                </p>
+            </div>
 
             <div className="image-container">
-                <img src="./imgs/cropped_image.png"/>
+                <img src="./imgs/cropped_image.png" alt="Saral" />
             </div>
-           
-
         </div>
     );
 };

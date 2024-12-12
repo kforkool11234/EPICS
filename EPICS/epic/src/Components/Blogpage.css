@@ -20,7 +20,62 @@
     transition: transform 6s ease, opacity 1s ease; 
    
   }
-  
+  /* Blog container styling */
+.blog-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Blog post styling */
+.blog-post {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Trigger the animation when visible */
+.blog-post.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Image styling */
+.imga {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease;
+}
+
+/* Image hover effect */
+.imga:hover {
+  transform: scale(1.05);
+}
+
+/* Read more link styling */
+.read-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: #007bff;
+  font-size: 1.2rem;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.read-more:hover {
+  color: #0056b3;
+}
+
   /* Styling for the arrow link */
   .read-more {
     position: absolute;

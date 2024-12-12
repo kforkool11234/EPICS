@@ -1,12 +1,47 @@
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import './Forme.css'; 
 import { Link } from 'react-router-dom';
 
 const Forme = () => {
+  const [isVisible, setIsVisible] = useState([false, false, false]);
+  const cardsRef = useRef([]);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry, index) => {
+          if (entry.isIntersecting) {
+            setIsVisible((prev) => {
+              const updated = [...prev];
+              updated[index] = true;
+              return updated;
+            });
+          }
+        });
+      },
+      { threshold: 0.1 } // Trigger when 10% of the card is visible
+    );
+
+    cardsRef.current.forEach((card, index) => {
+      if (card) {
+        observer.observe(card);
+      }
+    });
+
+    return () => {
+      if (cardsRef.current) {
+        cardsRef.current.forEach((card) => observer.unobserve(card));
+      }
+    };
+  }, []);
+
   return (
     <div className="container">
       {/* Card 1: Agent-Based Help */}
-      <div className="card">
+      <div
+        className={`card ${isVisible[0] ? 'visible' : ''}`}
+        ref={(el) => (cardsRef.current[0] = el)}
+      >
         <div className="card1">
           <h2>Agent-Based Help</h2>
           <p>
@@ -22,7 +57,10 @@ const Forme = () => {
       </div>
 
       {/* Card 2: Schemes Updates */}
-      <div className="card">
+      <div
+        className={`card ${isVisible[1] ? 'visible' : ''}`}
+        ref={(el) => (cardsRef.current[1] = el)}
+      >
         <h2>Schemes Updates</h2>
         <p>
           Our services provide information about schemes via SMS, along with a list of procedures for better awareness. You can either utilize the scheme for yourself or seek assistance from our agents through the agent portal. Please note that this form is designed solely for sending SMS notifications.
@@ -36,7 +74,10 @@ const Forme = () => {
       </div>
 
       {/* Card 3: Urgent Money Need */}
-      <div className="card">
+      <div
+        className={`card ${isVisible[2] ? 'visible' : ''}`}
+        ref={(el) => (cardsRef.current[2] = el)}
+      >
         <h2>Urgent-Money Need</h2>
         <p>
           We provide local money lending services by offering a list of registered local money lenders who can provide urgent cash when banks can't. You have the flexibility to choose the money lender that suits your needs from the list, ensuring a quick and convenient solution to your financial requirements.

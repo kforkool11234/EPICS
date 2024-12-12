@@ -67,6 +67,26 @@ font-size: 3.5rem;
 p {
     line-height: 1.6;
 }
+.schemes-counter {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    color: #051919;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+
 
 .mission {
     background-color: #eaf3ff;
