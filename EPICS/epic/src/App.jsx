@@ -7,6 +7,7 @@ import Blogpage from './Components/Blogpage';
 import About from './Components/About';
 import Contact from './Components/Contact';
 import PersonalInfo from './Components/PersonalInfo';
+import Schemes from './Components/schemes';
 import MoneyLenderForm from './Components/MoneyLenderForm'; // Import the new component
 import './App.css';
 
@@ -29,6 +30,7 @@ const App = () => {
           <Route path="/contact" element={<Contact />} /> {/* Contact page */}
           <Route path="/personalinfo" element={<PersonalInfo />} /> {/* Personal info page */}
           <Route path="/moneylender" element={<MoneyLenderForm />} /> {/* Money Lender Form page */}
+          <Route path="/schemes" element={<Schemes />} /> {/* Money Lender Form page */}
         </Routes>
       </div>
     </Router>
