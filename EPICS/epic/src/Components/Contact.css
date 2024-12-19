@@ -25,7 +25,7 @@
   transform: translateY(0); /* Move to normal position */
 }
 
-/* Rest of your styles */
+/* Label styles */
 .contact-label {
   display: block;
   margin-bottom: 8px;
@@ -33,25 +33,22 @@
   font-weight: bold;
 }
 
-.contact-input {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 20px;
-  border-radius: 4px;
-  border: 1px solid #ddd;
-  font-size: 16px;
-}
-
+/* Input field styles */
+.contact-input,
 .contact-textarea {
   width: 100%;
   padding: 10px;
   border-radius: 4px;
   border: 1px solid #ddd;
   font-size: 16px;
-  min-height: 100px;
   margin-bottom: 20px;
 }
 
+.contact-textarea {
+  min-height: 100px; /* Ensuring text area has a minimum height */
+}
+
+/* Button styles */
 .contact-button {
   background-color: #ff7f00;
   color: #ffffff;
@@ -65,4 +62,12 @@
 .contact-button:hover {
   background-color: green;
   cursor: pointer;
+}
+
+/* Optional - For responsive design (e.g., smaller screens) */
+@media (max-width: 600px) {
+  .contact-form {
+    padding: 20px;
+    width: 100%;
+  }
 }
