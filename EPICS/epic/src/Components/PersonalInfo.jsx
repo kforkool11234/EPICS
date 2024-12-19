@@ -16,10 +16,11 @@ const PersonalInfo = () => {
 
     try {
       // Send data to the server
-      await axios.post("http://localhost:3000/users", data);
-      await axios.post("http://localhost:3000/schemes", data);
-      // Navigate to the next page after successful submission
-      navigate("/");
+        const userResponse = await axios.post("http://localhost:3000/users", data);
+        const schemesResponse = await axios.post("http://localhost:3000/schemes", data);
+        console.log(schemesResponse.data.schemes)
+        // Navigate and pass data to the next page
+        navigate("/schemes", { state: { schemes: schemesResponse.data.schemes} });
     } catch (error) {
       console.error("There was an error submitting the form!", error);
     }

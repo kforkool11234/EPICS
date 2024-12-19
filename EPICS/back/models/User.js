@@ -27,6 +27,15 @@ const UserSchema = new mongoose.Schema({
     location: {
         type: String // e.g., 'urban','rular'
     },
+    city: {
+        type: String // e.g., 'urban','rular'
+    },
+    pincode: {
+        type: String // e.g., 'urban','rular'
+    },
+    state: {
+        type: String // e.g., 'urban','rular'
+    },
     income: {
         type: String // e.g., 'urban','rular'
     },

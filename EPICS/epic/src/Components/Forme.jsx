@@ -50,7 +50,7 @@ const Forme = () => {
           <p>
             हमारी सेवाएँ न्यूनतम या बिना लागत पर समर्पित एजेंट प्रदान करती हैं, जो सरकारी योजनाओं में पंजीकरण के लिए सहायता करती हैं। कागजी कार्रवाई से लेकर स्थलों पर मार्गदर्शन करने तक, हम आपके अनुभव को सहज बनाते हैं। हमारी टीम पंजीकरण प्रक्रिया को सरल बनाती है, ताकि आप लाभ प्राप्त कर सकें।
           </p>
-          <Link to="/personalinfo" className="button-link" style={{ textDecoration: 'none', color: 'white'}}>
+          <Link to="/personalinfo"  style={{ textDecoration: 'none', color: 'white'}}>
             <button>Register</button>
           </Link>
         </div>
