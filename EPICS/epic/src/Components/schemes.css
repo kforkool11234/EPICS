@@ -1,0 +1,52 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #2c3e50, #bdc3c7); /* Modern gradient */
+    font-family: 'Poppins', sans-serif;
+  }
+.elig{
+    text-align: center;
+    color: black;
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}  
+#schemes {
+    width: 70%;
+    height: 500px;
+    border: 2px solid black;
+    font-size: 20px;  /* Bigger text */
+    font-weight: bold; /* Bolder text */
+    color: #333;  /* Darker text for better readability */
+    padding: 10px; /* Add some space inside */
+    background-color: #f8f8f8; /* Light background for contrast */
+    resize: none; /* Prevent manual resizing */
+}
+
+#schemes:hover {
+    transform: scale(1.02);
+}
+@keyframes floatUpDown {
+    0% {
+        transform: translateY(20px);
+    }
+    50% {
+        transform: translateY(-10px); /* Move up */
+    }
+    100% {
+        transform: translateY(20px); /* Back to original position */
+    }
+}
+.law{
+    content: url("./public/imgs/law.png");
+    width:10%;
+    margin-left:86%;
+    animation: floatUpDown 2s ease-in-out infinite;
+    margin-top: -9%;
+   
+}
