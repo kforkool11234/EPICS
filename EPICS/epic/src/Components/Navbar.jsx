@@ -23,35 +23,10 @@ const Navbar = () => {
         setIsUserDropdownOpen(!isUserDropdownOpen);
     };
 
-    // Close the dropdown if clicked outside (optional)
-    useEffect(() => {
-        const handleClickOutside = (event) => {
-            if (event.target.closest('.usericon') === null) {
-                setIsUserDropdownOpen(false);
-            }
-        };
-
-        document.addEventListener('click', handleClickOutside);
-
-        return () => {
-            document.removeEventListener('click', handleClickOutside);
-        };
-    }, []);
 
     return (
         <div className="navbar">
             <div className="logo"><img src="imgs/sevase.png" width="150px" alt="Logo" height="40px" /></div>
-            <div className="usericon" onClick={toggleUserDropdown}>
-                <FaUserCircle />
-                {isUserDropdownOpen && (
-                    <div className="user-dropdown">
-                        <ul>
-                            <li><a href="/profile">Profile</a></li>
-                            <li><a href="/logout">Logout</a></li>
-                        </ul>
-                    </div>
-                )}
-            </div>
             <div className="hamburger" onClick={toggleMenu}>
                 <FontAwesomeIcon icon={faBars} size="lg" />
             </div>
