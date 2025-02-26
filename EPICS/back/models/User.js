@@ -25,30 +25,33 @@ const UserSchema = new mongoose.Schema({
         type: String // e.g., 'Healthy', 'Chronic Illness', etc.
     },
     location: {
-        type: String // e.g., 'urban','rular'
+        type: String // e.g., 'urban','rural'
     },
     city: {
-        type: String // e.g., 'urban','rular'
+        type: String // e.g., 'urban','rural'
     },
     pincode: {
-        type: String // e.g., 'urban','rular'
+        type: String
     },
     state: {
-        type: String // e.g., 'urban','rular'
+        type: String
     },
     income: {
-        type: String // e.g., 'urban','rular'
+        type: String
     },
     religion: {
-        type: String // e.g., 'hindu','bhudist',etc
+        type: String // e.g., 'hindu','buddhist', etc.
     },
     education: {
-        type: String // e.g., 'High School', 'Bachelor's', etc.
+        type: String // e.g., 'High School', 'Bachelor\'s', etc.
     },
     domain: {
-        type: String // e.g., 'High School', 'Bachelor's', etc.
+        type: String // e.g., 'High School', 'Bachelor\'s', etc.
+    },
+    // Added field to store the computed category (e.g., "BPL Children", "EWS Working-Age", etc.)
+    category: {
+        type: String
     }
-    
 }, { timestamps: true });
 
 // Method to set password
@@ -62,5 +65,6 @@ const UserSchema = new mongoose.Schema({
 //     const hash = crypto.pbkdf2Sync(password, this.salt, 10000, 512, 'sha512').toString('hex');
 //     return this.hash === hash;
 // };
+
 // Export the model
 export default mongoose.models.User || mongoose.model('User', UserSchema);
