@@ -1,6 +1,7 @@
+import dotenv from "dotenv";
 // Uses jQuery library
-var accountKey = "your_account_key";
-var destinationNumber = "recipient_number";
+var accountKey = process.env.acoount;
+var destinationNumber = process.env.rnum;
 
 var postUrl = "https://secure.smsgateway.ca/services/message.svc/" + accountKey + "/" + destinationNumber;
 
